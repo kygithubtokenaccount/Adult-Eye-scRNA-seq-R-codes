@@ -33,7 +33,7 @@ DimPlot(a7d, label = F, pt.size = 2, cols = c("grey","grey","grey","grey","red",
 FeaturePlot(a7d, features = "Rh3", pt.size = 2) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #2 J
 FeaturePlot(a7d, features = "Rh4", pt.size = 2) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #2 K
 FeaturePlot(a7d, features = "pros", pt.size = 2, order = T) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #2 L
-FeaturePlot(a7d, features = "Cep135", pt.size = 2, order = T) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #2 M
+FeaturePlot(a7d, features = "igl", pt.size = 2, order = T) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #2 M
 
 # Figure 3 A
 DimPlot(a7d, label = F, pt.size = 2, cols = c("grey","grey","grey","grey","grey","red")) + NoAxes() + NoLegend()
@@ -63,16 +63,16 @@ VlnPlot(a7d, features = "Pdh") + NoLegend()
 
 # Figure 6 A
 DimPlot(a1f, label = F, pt.size = 2) + NoAxes() + NoLegend()
-# Figure 6 D-F
-DimPlot(a1dh, label = F, pt.size = 2) + NoAxes() + NoLegend() #6 D
-DimPlot(a1dh, label = F, pt.size = 2, split.by = "orig.ident") + NoAxes() + NoLegend() #6 E, F
-# Figure 6 H-K
-FeaturePlot(a1dh, features = "CG6999", pt.size = 2, order = T, split.by = "orig.ident") & NoAxes() & NoLegend() & theme(plot.title= element_blank(), axis.title.y.right = element_blank()) #6H,I
-FeaturePlot(a1dh, features = "t", pt.size = 2, order = T, split.by = "orig.ident") & NoAxes() & NoLegend() & theme(plot.title= element_blank(), axis.title.y.right = element_blank()) #6J,K
-# Figure 6 L-M
-a1dh_subset_vlnplot <- subset(a1dh, idents = c("1_Pigment","Cone"), invert = TRUE)
-VlnPlot(a1dh_subset_vlnplot, features = "CG6999", split.by = "orig.ident", split.plot = T) & theme(plot.title = element_text(face = "italic")) & NoLegend() #6 L
-VlnPlot(a1dh_subset_vlnplot, features = "t", split.by = "orig.ident", split.plot = T) & theme(plot.title = element_text(face = "italic")) & NoLegend() #6 M
+# Figure 6 B-D
+DimPlot(a1dh, label = F, pt.size = 2) + NoAxes() + NoLegend() #6 B
+DimPlot(a1dh, label = F, pt.size = 2, split.by = "orig.ident") + NoAxes() + NoLegend() #6 C, D
+# Figure 6 E-G
+FeaturePlot(a1dh, features = "CG6999", pt.size = 2, order = T, split.by = "orig.ident") & NoAxes() & NoLegend() & theme(plot.title= element_blank(), axis.title.y.right = element_blank()) #6E, F
+FeaturePlot(a1dh, features = "t", pt.size = 2, order = T, split.by = "orig.ident") & NoAxes() & NoLegend() & theme(plot.title= element_blank(), axis.title.y.right = element_blank()) #6G, H
+# Figure 6 I, J
+a1dh_subset_vlnplot <- subset(a1dh, idents = c("1_Pigment","Cone"), invert = TRUE) # remove primary pigment and cone cells
+VlnPlot(a1dh_subset_vlnplot, features = "CG6999", split.by = "orig.ident", split.plot = T) & theme(plot.title = element_text(face = "italic")) & NoLegend() #6 I
+VlnPlot(a1dh_subset_vlnplot, features = "t", split.by = "orig.ident", split.plot = T) & theme(plot.title = element_text(face = "italic")) & NoLegend() #6 J
 
 # Figure 7
 DimPlot(a7dr, pt.size = 2, label = F, cols = c("grey","grey","grey","red","blue","green3","orchid","grey")) & NoAxes() & NoLegend() #7A

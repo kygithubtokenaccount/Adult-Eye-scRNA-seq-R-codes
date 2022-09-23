@@ -45,8 +45,8 @@ FeaturePlot(a1d, features = "Rh3", pt.size = 2) + NoAxes() + NoLegend() & theme(
 FeaturePlot(a3d, features = "Rh3", pt.size = 2) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #S3 C
 FeaturePlot(a1d, features = "Rh4", pt.size = 2) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #S3 D
 FeaturePlot(a3d, features = "Rh4", pt.size = 2) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #S3 D
-FeaturePlot(a1d, features = "Cep135", pt.size = 2, order = T) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #S3 E
-FeaturePlot(a3d, features = "Cep135", pt.size = 2, order = T) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #S3 E
+FeaturePlot(a1d, features = "igl", pt.size = 2, order = T) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #S3 E
+FeaturePlot(a3d, features = "igl", pt.size = 2, order = T) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #S3 E
 
 # Supp Fig 4
 # load 1 day, 3 days and 7 days old male adult eyes with full Rh, Dorsal 3rd R7 and DRA annotated as a1drhc, a3drhc, and a7drhc, respectively
@@ -72,8 +72,8 @@ FeaturePlot(a1d, features = "oc", pt.size = 2) + NoAxes() + NoLegend() & theme(p
 FeaturePlot(a3d, features = "oc", pt.size = 2) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #S5 C
 FeaturePlot(a1d, features = "Zasp66", pt.size = 2) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #S5 D
 FeaturePlot(a3d, features = "Zasp66", pt.size = 2) + NoAxes() + NoLegend() & theme(plot.title= element_blank()) #S5 D
-VlnPlot(a1d, features = "ninaE") + NoLegend()
-VlnPlot(a3d, features = "ninaE") + NoLegend()
+VlnPlot(a1d, features = "ninaE") + NoLegend() #S5 E
+VlnPlot(a3d, features = "ninaE") + NoLegend() #S5 F
 
 # Supp Fig 6
 DimPlot(a1d, label = F, pt.size = 3, cols = c("grey","grey","red","grey","grey","grey")) + NoAxes() + NoLegend() #S6 A

@@ -16,20 +16,20 @@ library(dplyr)
 
 # We will extract the SoupX processed counts matrices from each of these data set and then remove Rh3, Rh4, Rh5 and/or Rh6
 
-a1dr.data <- as.matrix(GetAssayData(a7dr, slot = "counts", assay = "RNA"))
-a1drh34.data <- a7dr.data[-(which(rownames(a7dr.data) %in% c("Rh3","Rh4"))),]
-a1drh56.data <- a7dr.data[-(which(rownames(a7dr.data) %in% c("Rh5","Rh6"))),]
-a1dra.data <- a7dr.data[-(which(rownames(a7dr.data) %in% c("Rh3","Rh4","Rh5","Rh6"))),]
+a1dr.data <- as.matrix(GetAssayData(a1dr, slot = "counts", assay = "RNA"))
+a1drh34.data <- a1dr.data[-(which(rownames(a1dr.data) %in% c("Rh3","Rh4"))),]
+a1drh56.data <- a1dr.data[-(which(rownames(a1dr.data) %in% c("Rh5","Rh6"))),]
+a1dra.data <- a1dr.data[-(which(rownames(a1dr.data) %in% c("Rh3","Rh4","Rh5","Rh6"))),]
 
-a3dr.data <- as.matrix(GetAssayData(a7dr, slot = "counts", assay = "RNA"))
-a3drh34.data <- a7dr.data[-(which(rownames(a7dr.data) %in% c("Rh3","Rh4"))),]
-a3drh56.data <- a7dr.data[-(which(rownames(a7dr.data) %in% c("Rh5","Rh6"))),]
-a3dra.data <- a7dr.data[-(which(rownames(a7dr.data) %in% c("Rh3","Rh4","Rh5","Rh6"))),]
+a3dr.data <- as.matrix(GetAssayData(a3dr, slot = "counts", assay = "RNA"))
+a3drh34.data <- a3dr.data[-(which(rownames(a3dr.data) %in% c("Rh3","Rh4"))),]
+a3drh56.data <- a3dr.data[-(which(rownames(a3dr.data) %in% c("Rh5","Rh6"))),]
+a3dra.data <- a3dr.data[-(which(rownames(a3dr.data) %in% c("Rh3","Rh4","Rh5","Rh6"))),]
 
-a3dr.data <- as.matrix(GetAssayData(a7dr, slot = "counts", assay = "RNA"))
-a3drh34.data <- a7dr.data[-(which(rownames(a7dr.data) %in% c("Rh3","Rh4"))),]
-a3drh56.data <- a7dr.data[-(which(rownames(a7dr.data) %in% c("Rh5","Rh6"))),]
-a3dra.data <- a7dr.data[-(which(rownames(a7dr.data) %in% c("Rh3","Rh4","Rh5","Rh6"))),]
+a7dr.data <- as.matrix(GetAssayData(a7dr, slot = "counts", assay = "RNA"))
+a7drh34.data <- a7dr.data[-(which(rownames(a7dr.data) %in% c("Rh3","Rh4"))),]
+a7drh56.data <- a7dr.data[-(which(rownames(a7dr.data) %in% c("Rh5","Rh6"))),]
+a7dra.data <- a7dr.data[-(which(rownames(a7dr.data) %in% c("Rh3","Rh4","Rh5","Rh6"))),]
 
 # We run Seurat scTransform workflow on these count matrices
 

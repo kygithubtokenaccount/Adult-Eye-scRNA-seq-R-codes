@@ -30,7 +30,7 @@ sc = SoupChannel(tod, toc)
 # the setnames are the seurat cluster # generated above
 # colnames to bring the names for each cell associated with the cluster info
 sc1 = sc
-sc1 = setClusters(sc1, setNames(a1dn$seurat_clusters, colnames(a1dn)))
+sc1 = setClusters(sc1, setNames(a7d$seurat_clusters, colnames(a7d)))
 
 # Run SoupX with default parameters, auto estimate the contamination
 sc1 = autoEstCont(sc1)
